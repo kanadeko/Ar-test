@@ -11,17 +11,17 @@
 <body style='margin:0px; overflow:hidden;'>
 	<!-- 時計表示 -->
 	<div id="clock">
-		<canvas id="canvas">
+		<canvas id="canvas"></canvas>
 			<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 			<script src="clock.js"></script>
-		</canvas>
+		
 	</div>
 
 <!-- A-Frameシーン -->
 <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false;">
 
 	<a-marker preset="hiro">
-        <a-plane width="1" height="1" position="0 0.3 0" rotation="-90 0 0" material="shader:html; target: #canvas"></a-plane>
+        <a-plane width="1" height="1" rotation="-90 0 0" material="shader:html; target: #clock"></a-plane>
     </a-marker>
 
     <!-- カメラ -->
