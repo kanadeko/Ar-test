@@ -3,3 +3,9 @@ body{
 	padding:0;
 	overflow:hidden;
 }
+#clock {
+    height: 1000px;
+    width: 1000px;
+    z-index: -50;
+    background-color: #FFF;
+}

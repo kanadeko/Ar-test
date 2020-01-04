@@ -5,13 +5,20 @@
 <!-- AR.js読み込み -->
 <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 
+<script src="https://unpkg.com/aframe-html-shader@0.2.0/dist/aframe-html-shader.min.js"></script>
+<script src="http://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
 <body style='margin:0px; overflow:hidden;'>
+	<!-- 時計表示 -->
+    <canvas id="clock"></canvas>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="clock.js"></script>
 
 <!-- A-Frameシーン -->
 <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;" vr-mode-ui="enabled: false;">
 
 	<a-marker preset="hiro">
-        <a-plane width="1" height="1" rotation="-90 0 0" ></a-plane>
+        <a-plane width="1" height="1" rotation="-90 0 0" material="shader:html; target: #clock"></a-plane>
     </a-marker>
 
     <!-- カメラ -->
